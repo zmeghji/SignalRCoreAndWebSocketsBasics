@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.89
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRCoreBasics", "SignalRCoreBasics\SignalRCoreBasics.csproj", "{DE045022-7350-4328-99A6-1E97B47EA5EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSockets", "WebSockets\WebSockets.csproj", "{0C435287-9DE3-4D21-8AC1-AB73F32176B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE045022-7350-4328-99A6-1E97B47EA5EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE045022-7350-4328-99A6-1E97B47EA5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE045022-7350-4328-99A6-1E97B47EA5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE045022-7350-4328-99A6-1E97B47EA5EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C435287-9DE3-4D21-8AC1-AB73F32176B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C435287-9DE3-4D21-8AC1-AB73F32176B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C435287-9DE3-4D21-8AC1-AB73F32176B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C435287-9DE3-4D21-8AC1-AB73F32176B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D04C1678-BC44-49E6-BD85-C5C28ABD107C}
+	EndGlobalSection
+EndGlobal

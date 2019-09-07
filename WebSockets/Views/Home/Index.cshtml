@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Home</h1>
+
+<div> <input type="text" id="textToEcho"/></div>
+<div><p id="echoedText"></p></div>
+@section scripts{
+<script>
+    var socket = new WebSocket("ws://localhost:60335/ws");
+    socket.onopen = function (event) {
+        alert("Web Socket Open");
+    }
+    socket.onclose = function (event) {
+        alert("Web Socket Closed");
+    }
+    $("#textToEcho").keydown(function () {
+        socket.send($("#textToEcho").val())
+    })
+    socket.onmessage = function (event) {
+        $("#echoedText").append(event.data);
+    };
+</script>
+}

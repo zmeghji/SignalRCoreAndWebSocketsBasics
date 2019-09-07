@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Home</h1>
+
+<div class="row" id="orderRow">
+    <div class="col-md-3">
+        <label>Click Here To Order Something</label>
+    </div>
+    <div class="col-md-3">
+        <button id="order" class="btn btn-primary">Order</button>
+    </div>
+</div>
+<div class="row" id="orderStatusRow" style="display:none">
+    <div class="col-md-12">
+        <p id="update">Order is 0% Complete</p>
+    </div>
+</div>
+@section Scripts{
+<script src="~/lib/signalr/signalr.js"></script> 
+<script>
+    var connection = new signalR.HubConnectionBuilder()
+        .withUrl("/orderhub")
+        .build();
+    connection.on("OrderProgressUpdate", (update) => {
+        $("#update").html("Order is " +update + "% Complete")
+    })
+    connection.on("Finished", () => {
+        $("#update").html("Order Completed")
+        connection.stop();
+    })
+
+    connection.start().catch(err => console.error(err.toString()))
+
+    $("#order").click(() => {
+        $("#orderRow").hide();
+        $("#orderStatusRow").show();
+        connection.invoke("GetUpdate")
+    })
+</script>
+}
